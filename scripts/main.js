@@ -2,15 +2,8 @@
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
-  const FRAME_RATE = 60
-  const PARTICLE_NUM = 2000
-  const RADIUS = Math.PI * 2
-  const CANVASWIDTH = 1000
-  const CANVASHEIGHT = 150
-  const CANVASID = 'canvas'
-
+  // 这里是显示的文字，\n可以换行
   let texts = ['受水水水水水水水水水水水水\n水水水水水水水苏', '订单得', '赛事']
-
   let canvas,
     text = texts[0],
     textIndex = 0
