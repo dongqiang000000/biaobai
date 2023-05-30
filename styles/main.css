@@ -1,7 +1,7 @@
-@font-face {
-  font-family: "myFont";
-  src: url("./楷体.ttf");
-}
+/* @font-face {
+  font-family: myKaiTi;
+  src: url("./kaiTi.ttf");
+} */
 
 * {
   margin: 0;
@@ -33,7 +33,7 @@ body {
   filter: contrast(120%);
   background-color: black;
   position: relative;
-  font-family: "myFont";
+  font-family: 楷体;
 }
 
 .container {
@@ -56,12 +56,14 @@ body {
   position: absolute;
   top: 60px;
   left: 50%;
-  color: red;
+  color: #00a67c;
   transform: translateX(-50%);
   white-space: pre-wrap;
   text-align: center;
   user-select: none;
-  font-size: 22px;
+  font-size: 20px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00a67c,
+    0 0 70px #00a67c, 0 0 80px #00a67c, 0 0 100px #00a67c, 0 0 150px #00a67c;
 }
 
 #universe {

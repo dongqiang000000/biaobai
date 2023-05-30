@@ -3,7 +3,7 @@
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame
 
   // 这里是显示的文字，\n可以换行
-  let texts = ['受水水水水水水水水水水水水\n水水水水水水水苏', '订单得', '赛事']
+  let texts = ['受水水水水水水水水水水水水\n水水水水水水水苏', '订单得', '赛事', '啊啊啊啊啊啊啊啊']
   let canvas,
     text = texts[0],
     textIndex = 0
@@ -17,15 +17,14 @@
       text = texts[textIndex]
       setText()
     }, false)
-
-    document.addEventListener('touchstart', function (e) {
-      textIndex++
-      if (textIndex >= texts.length) {
-        return
-      }
-      text = texts[textIndex]
-      setText()
-    }, false)
+    // document.addEventListener('touchstart', function (e) {
+    //   textIndex++
+    //   if (textIndex >= texts.length) {
+    //     return
+    //   }
+    //   text = texts[textIndex]
+    //   setText()
+    // }, false)
   }
 
   function init () {
