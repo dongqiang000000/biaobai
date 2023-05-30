@@ -51,7 +51,7 @@ body {
   height: 100% auto;
 }
 
-@keyframes pulsate {
+/* @keyframes pulsate {
   100% {
     text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
       0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
@@ -59,6 +59,16 @@ body {
   0% {
     text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
       0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+  }
+} */
+
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
   }
 }
 
@@ -74,7 +84,26 @@ body {
   text-align: center;
   user-select: none;
   font-size: 18px;
-  animation: pulsate 0.11s ease-in-out infinite alternate;
+
+  background-image: -webkit-linear-gradient(
+    left,
+    blue,
+    #66ffff 10%,
+    #cc00ff 20%,
+    #cc00cc 30%,
+    #ccccff 40%,
+    #00ffff 50%,
+    #ccccff 60%,
+    #cc00cc 70%,
+    #cc00ff 80%,
+    #66ffff 90%,
+    blue 100%
+  );
+  -webkit-text-fill-color: transparent; /* 字体设置成透明色 */
+  -webkit-background-clip: text; /* 裁剪背景，使文字作为裁剪区域向外裁剪 */
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s linear infinite;
+  /* animation: pulsate 0.11s ease-in-out infinite alternate; */
   /* border: 2px solid #fff;
   border-radius: 12px;
   padding: 24px;
